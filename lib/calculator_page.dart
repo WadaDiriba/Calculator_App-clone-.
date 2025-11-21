@@ -55,11 +55,17 @@ class _CalculatorPageState extends State<CalculatorPage> {
           Row(
         mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("1",style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-              
-              ),),
+              Builder(
+                builder: (context) {
+
+                    
+                  return Text("1",style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  
+                  ),);
+                }
+              ),
               SizedBox(width: 50,),
               Text("2",style: TextStyle(
                 fontWeight: FontWeight.bold,

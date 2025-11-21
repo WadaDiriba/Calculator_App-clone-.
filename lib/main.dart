@@ -1,6 +1,6 @@
-import 'package:calculator_app/calculator_page.dart';
-import 'package:calculator_app/calculators.dart';
-import 'package:calculator_app/calculatos.dart';
+import 'package:calculator_app/calculator2.dart';
+
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
 
       debugShowCheckedModeBanner: false,
 
-      home:Calculators(),
+      home:Calculator2(),
     );
   }
 }

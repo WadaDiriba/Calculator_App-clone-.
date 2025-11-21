@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 class Calculators extends StatefulWidget {
@@ -8,9 +9,22 @@ class Calculators extends StatefulWidget {
 }
 
 class _CalculatorsState extends State<Calculators> {
+
+  bool _isDark=false;
+
+  
+
+  void togglemode(){
+        setState(() {
+           _isDark=!_isDark;
+        });
+   
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      backgroundColor: _isDark?Colors.black:Colors.white,
 
       appBar: AppBar(
         centerTitle: true,
@@ -24,32 +38,48 @@ class _CalculatorsState extends State<Calculators> {
 
         actions: [
                 IconButton(onPressed:(){},
-                 icon:Icon(Icons.arrow_back_ios_new,color: Colors.green,)),
+                 icon:Icon(Icons.arrow_back_ios_new,
+                 color: Colors.green,)),
                 SizedBox(width: 10,),
 
-              IconButton(onPressed:(){}, icon:Icon(Icons.settings,color: Colors.green,))
+              IconButton(onPressed:togglemode,
+
+                  
+
+              
+               icon:Icon(Icons.settings,
+              color: Colors.green,))
         ],
       ),
 
         
       body: Container(
-
+      
+         
+        
+      
         child: Column(
-
+      
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Row(
-
+      
               children: [
-
+      
                  Container(
-
+      
+      
+      
                   child: SizedBox(
-
+      
                     height: 70,
                     width: 70,
                    child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+
+                        Navigator.of(context).pop();
+                        
+                      },
                       style: TextButton.styleFrom(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5.0),
@@ -60,18 +90,18 @@ class _CalculatorsState extends State<Calculators> {
                         color: Colors.green,
                       ),),
                     ),
-
-
-
-
+      
+      
+      
+      
                    ),
                   ),
-
+      
                  
                 SizedBox(width: 30,),
                 Container(
                   child: SizedBox(
-
+      
                     height: 70,
                     width: 70,
                    child: TextButton(
@@ -87,14 +117,13 @@ class _CalculatorsState extends State<Calculators> {
                       ),),
                     ),
                   )
-
+      
                  
                  
                   ),
                    SizedBox(width: 30,),
-                  Container(
-                  child: SizedBox(
-
+                  SizedBox(
+                        
                     height: 70,
                     width: 70,
                    child: TextButton(
@@ -109,39 +138,39 @@ class _CalculatorsState extends State<Calculators> {
                         color: Colors.green,
                       ),),
                     ),
-                  )
                   ),
                   SizedBox(width: 30,),
-                  Container(
-                  child: SizedBox(
-
+                  SizedBox(
+                        
                     height: 70,
                     width: 70,
                    child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                  
+                     
+                      },
                       style: TextButton.styleFrom(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5.0),
                         ),
                       ),
-                      child: const Text('Del',style: TextStyle(
+                      child: const Text('del',style: TextStyle(
                         fontSize: 30,
                         color: Colors.green,
                       ),),
                     ),
-                  )
                   ),
-
+      
               ],
             ),
-
+      
             Row(
-children: [
-
+            children: [
+      
                  Container(
-
+      
                   child: SizedBox(
-
+      
                     height: 70,
                     width: 70,
                    child: TextButton(
@@ -156,18 +185,14 @@ children: [
                         color: Colors.black,
                       ),),
                     ),
-
-
-
-
+      
                    ),
                   ),
-
-                 
+                    
                 SizedBox(width: 30,),
                 Container(
                   child: SizedBox(
-
+      
                     height: 70,
                     width: 70,
                    child: TextButton(
@@ -182,15 +207,13 @@ children: [
                         color: Colors.black,
                       ),),
                     ),
-                  )
-
-                 
+                  ),
                  
                   ),
                    SizedBox(width: 30,),
                   Container(
                   child: SizedBox(
-
+      
                     height: 70,
                     width: 70,
                    child: TextButton(
@@ -210,7 +233,7 @@ children: [
                   SizedBox(width: 30,),
                   Container(
                   child: SizedBox(
-
+      
                     height: 70,
                     width: 70,
                    child: TextButton(
@@ -227,17 +250,17 @@ children: [
                     ),
                   )
                   ),
-
+      
               ],
-
+      
             ),
             Row(
               children: [
-
+      
                  Container(
-
+      
                   child: SizedBox(
-
+      
                     height: 70,
                     width: 70,
                    child: TextButton(
@@ -252,18 +275,18 @@ children: [
                         color: Colors.black,
                       ),),
                     ),
-
-
-
-
+      
+      
+      
+      
                    ),
                   ),
-
+      
                  
                 SizedBox(width: 30,),
                 Container(
                   child: SizedBox(
-
+      
                     height: 70,
                     width: 70,
                    child: TextButton(
@@ -279,14 +302,13 @@ children: [
                       ),),
                     ),
                   )
-
+      
                  
-                 
-                  ),
+                    ),
                    SizedBox(width: 30,),
                   Container(
                   child: SizedBox(
-
+      
                     height: 70,
                     width: 70,
                    child: TextButton(
@@ -306,10 +328,10 @@ children: [
                   SizedBox(width: 30,),
                   Container(
                   child: SizedBox(
-
+      
                     height: 70,
                     width: 70,
-                   child: TextButton(
+                      child: TextButton(
                       onPressed: () {},
                       style: TextButton.styleFrom(
                         shape: RoundedRectangleBorder(
@@ -323,18 +345,18 @@ children: [
                     ),
                   )
                   ),
-
+      
               ],
             ),
-
+      
             Row(
-
+      
               children: [
-
+      
                  Container(
-
+      
                   child: SizedBox(
-
+      
                     height: 70,
                     width: 70,
                    child: TextButton(
@@ -349,18 +371,18 @@ children: [
                         color: Colors.black,
                       ),),
                     ),
-
-
-
-
+      
+      
+      
+      
                    ),
                   ),
-
+      
                  
                 SizedBox(width: 30,),
                 Container(
                   child: SizedBox(
-
+      
                     height: 70,
                     width: 70,
                    child: TextButton(
@@ -376,14 +398,12 @@ children: [
                       ),),
                     ),
                   )
-
-                 
-                 
+        
                   ),
                    SizedBox(width: 30,),
                   Container(
                   child: SizedBox(
-
+      
                     height: 70,
                     width: 70,
                    child: TextButton(
@@ -401,17 +421,18 @@ children: [
                   )
                   ),
                   SizedBox(width: 30,),
-
-
+      
+      
                   Container(
                     color: Colors.green,
                   child: SizedBox(
-
+      
                     height: 100,
                     width: 70,
                    child: TextButton(
                       onPressed: () {},
                       style: TextButton.styleFrom(
+
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5.0),
                         ),
@@ -423,18 +444,18 @@ children: [
                     ),
                   )
                   ),
-
+      
               ],
             ),
-
+      
             Row(
-
+      
               children: [
-
+      
                  Container(
-
+      
                   child: SizedBox(
-
+      
                     height: 70,
                     width: 70,
                    child: TextButton(
@@ -449,18 +470,18 @@ children: [
                         color: Colors.black,
                       ),),
                     ),
-
-
-
-
+      
+      
+      
+      
                    ),
                   ),
-
+      
                  
                 SizedBox(width: 30,),
                 Container(
                   child: SizedBox(
-
+      
                     height: 70,
                     width: 70,
                    child: TextButton(
@@ -476,14 +497,14 @@ children: [
                       ),),
                     ),
                   )
-
+      
                  
                  
                   ),
                    SizedBox(width: 30,),
                   Container(
                   child: SizedBox(
-
+      
                     height: 70,
                     width: 70,
                    child: TextButton(
